@@ -1,5 +1,6 @@
 import csv
 from describe import describe
+from histogram import histogram
 
 def open_csv(file_path):
 	with open(file_path, "r") as csvfile:
@@ -9,8 +10,10 @@ def open_csv(file_path):
 
 if __name__ == "__main__":
     try :
-        dataset = open_csv("datasets/dataset_test.csv")
-        describe(dataset=dataset)
+        pass
+        dataset = open_csv("datasets/dataset_train.csv")
+        # describe(dataset=dataset)
     except Exception as e:
         print(e)
-        print("Error while reading the file. Please check the file path and try again.")
+
+    histogram()
